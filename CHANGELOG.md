@@ -1,3 +1,9 @@
+## [5.0.0-beta.2](https://github.com/Lint-Free-Technology/card-mod-plus/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2026-02-18)
+
+### 🐞 Bug Fixes
+
+* Add ha-adaptive-dialog to dialogs where card-mod is added. Remove old ha-wa-dialog and ha-md-dialog. ([6f186a8](https://github.com/Lint-Free-Technology/card-mod-plus/commit/6f186a8c792e274f26bf505b11ffc70365a265b3))
+
 ## [5.0.0-beta.1](https://github.com/Lint-Free-Technology/lovelace-card-mod/compare/v4.2.1...v5.0.0-beta.1) (2026-02-13)
 
 ### ⭐ New Features
