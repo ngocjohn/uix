@@ -317,10 +317,10 @@ export class CardMod extends LitElement {
 if (!customElements.get("card-mod")) {
   customElements.define("card-mod", CardMod);
   console.groupCollapsed(
-    `%c💡 CARD-MOD ${pjson.version} IS INSTALLED 💡`,
+    `%c💡 CARD-MOD-PLUS ${pjson.version} IS INSTALLED 💡`,
     'color: white; background-color: #CE3226; padding: 2px 5px; font-weight: bold; border-radius: 5px;',
   );
-  console.log('Readme:', 'https://github.com/Lint-Free-Technology/lovelace-card-mod');
+  console.log('Readme:', 'https://github.com/Lint-Free-Technology/card-mod-plus');
   console.groupEnd();
   window.dispatchEvent(new Event("card-mod-bootstrap"));
 }

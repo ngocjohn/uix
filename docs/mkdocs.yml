@@ -1,0 +1,53 @@
+site_name: Card-mod Plus Documentation
+docs_dir: source
+theme:
+  name: material
+  variant: classic
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - schema: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: assets/images/dark_icon.png
+  favicon: assets/images/icon.png
+extra:
+  generator: false
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+nav:
+  - 'index.md'
+  - 'quick-start.md'
+  - 'chapter/faq/faq.md'
+repo_url: https://github.com/Lint-Free-Technology/card-mod-plus
+repo_name: GitHub
+edit_uri: blob/master/docs/source/
+extra_css:
+  - stylesheets/extra.css #https://maketintsandshades.com/#colors=CE3226&hashtag=0&steps=10

@@ -20,3 +20,8 @@ export async function hass() {
   while (!base.hass) await new Promise((r) => window.setTimeout(r, 100));
   return base.hass;
 }
+
+export async function provideHass(el) {
+  const base: any = await hass_base_el();
+  base.provideHass(el);
+}
