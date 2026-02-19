@@ -1,3 +1,7 @@
 node_modules/
-custom_components/
 dist/
+__pycache__/
+.vscode/settings.json
+.venv/
+docs/site/
+docs/.cache/

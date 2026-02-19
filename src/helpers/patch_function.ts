@@ -1,6 +1,5 @@
 import pjson from "../../package.json";
 import { selectTree } from "./selecttree";
-import { simpleHash } from "./simple-hash";
 
 (window as any).cardMod_patch_state = (window as any).cardMod_patch_state || {};
 
@@ -64,13 +63,9 @@ export function patch_element(element, afterwards?) {
 function log_patch_warning(key) {
   if ((window as any).cm_patch_warning) return;
   (window as any).cm_patch_warning = true;
-  const message = `CARD-MOD (${pjson.version}): ${key} already patched by ${patchState[key]?.version || "unknown version"}!`;
+  const message = `CARD-MOD-PLUS (${pjson.version}): ${key} already patched by ${patchState[key]?.version || "unknown version"}!`;
   const details = [
-    "Card-mod likely loaded twice with different resource URLs.",
-    "Make sure all card-mod resource URLs including hacstag match EXACTLY.",
-    "Also check other custom elements including cards and themes which may load card-mod.",
-    "See https://github.com/Lint-Free-Technology/lovelace-card-mod/blob/master/README.md#performance-improvements for details.",
-    "If you have corrected this issue in config, then the device generating this notification needs its Frontend cache cleared."
+    "Make sure you are using Card-mod Plus and not the original Card-mod, as both cannot be used at the same time.",
   ];
 
   selectTree(document.body, "home-assistant").then((haEl) => {
@@ -86,7 +81,7 @@ function log_patch_warning(key) {
         "system_log",
         "write",
         {
-          logger: `card-mod.${pjson.version}`,
+          logger: `card-mod-plus.${pjson.version}`,
           level: "warning",
           message: `${message} ${details.join(" ")} ${info}`,
         },
@@ -94,7 +89,7 @@ function log_patch_warning(key) {
         false
       ).catch(error => {
         console.error(
-          "CARD-MOD: Failed to create duplicate patch warning notification",
+          "CARD-MOD-PLUS: Failed to create duplicate patch warning notification",
           error
         );
       });

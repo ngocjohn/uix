@@ -1,10 +1,12 @@
 {
   "name": "card-mod",
   "private": true,
-  "version": "5.0.0-beta.1",
+  "version": "5.0.0-alpha.20",
   "description": "",
   "scripts": {
     "build": "rollup -c",
+    "update-manifest-version": "node -e \"const pkg = require('./package.json'); const manifest = require('./custom_components/card_mod_plus/manifest.json'); manifest.version = pkg.version; require('fs').writeFileSync('./custom_components/card_mod_plus/manifest.json', JSON.stringify(manifest, null, 2) + '\\n');\"",
+    "prebuild": "npm run update-manifest-version",
     "watch": "rollup -c --watch"
   },
   "keywords": [],

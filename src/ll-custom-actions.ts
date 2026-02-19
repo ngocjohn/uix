@@ -26,7 +26,7 @@ window.addEventListener("card-mod-bootstrap", async (ev: CustomEvent) => {
   });
 });
 
-class Actions {
+export class Actions {
   static async clear_cache() {
     if (window.caches) {
       try {
