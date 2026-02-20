@@ -20,8 +20,7 @@ body:
       multiple: false
       options:
         - HACS
-        - Manual using Dashboard resources UI (Dashboard resource_mod = storage)
-        - Manual using YAML resources (Dashboard resource_mode = yaml)
+        - Manual
     validations:
       required: true
   - type: dropdown
@@ -78,11 +77,9 @@ body:
       options:
         - label: Understand that this is a channel for reporting bugs, not a support forum (https://community.home-assistant.io/).
           required: true
-        - label: Have made sure I am using the latest version of the plugin.
+        - label: Have made sure I am using the latest version of the integration.
           required: true
-        - label: Have searched Home Assistant logs for any relevant card-mod errors or warnings.
-          required: true
-        - label: Have followed the troubleshooting steps of the "Common Problems" section of https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins.
+        - label: Have searched Home Assistant logs for any relevant UIX errors or warnings.
           required: true
         - label: Understand that failure to follow the template above may increase the time required to handle my bug-report, or cause it to be closed without further action.
           required: true
