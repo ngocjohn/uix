@@ -16,7 +16,7 @@ export default {
     nodeResolve(),
     json(),
     typescript(),
-    // getBabelOutputPlugin({ presets: ["@babel/preset-env"] }),
+    getBabelOutputPlugin({ presets: ["@babel/preset-env"] }),
     !dev && terser({ format: { comments: false } }),
   ],
 };
