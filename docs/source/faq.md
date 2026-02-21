@@ -10,15 +10,15 @@ hide:
 
 Yes, UI eXtension is a drop in replacement for Card-mod versions up to 4.2.1. All Card-mod card and themes configurations are supported. While you are encouraged to update to use `uix:` in your cards and `uix-<thing>(-yaml)` for your themes, it is not required.
 
-## Is UI eXtension card Card-mod with different documentation?
+## Is UI eXtension just Card-mod with different documentation?
 
-No, UI eXtension code has been updated so that UIX is primary domain and config key.
+No, UI eXtension code has been updated so that UIX is primary domain and config key. Card-mod keys are supported but overridden by `uix:`.
 
 ??? info "UI eXtension differences from Card-mod"
-    - Config key for cards is `uix:`. `card_mod:` is supported but is overridden by `uix:`.
-    - Theme key is `uix-theme:`. `card-mod-theme:` is supported but is overridden by `uix-theme:`.
-    - Theme `thing` keys are `uix-<thing>(-yaml):`. `card-mod-<thing>(-yaml):` is supported but is overridden by `uix-<thing>(-yaml):`.
-    - HTML node for UI eXtension is `<uix-node>` and properties of the node all refer to `uix` and not `card-mod`.
+    - Config key for cards is `uix:`.
+    - Theme key is `uix-theme:`.
+    - Theme `thing` keys are `uix-<thing>(-yaml):`.
+    - HTML node for UI eXtension is `<uix-node>` and properties of the node all refer to `uix`.
     - You can use `{# uix.debug #}` to debug templates.
     - All debug console messages will start with `UIX`.
 
