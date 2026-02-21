@@ -17,7 +17,7 @@ export async function get_theme(root: Uix): Promise<UixStyle> {
 
   const el = root.parentElement ? root.parentElement : root;
   const cs = window.getComputedStyle(el);
-  const theme = cs.getPropertyPriority("--uix-theme") || cs.getPropertyValue("--card-mod-theme");
+  const theme = cs.getPropertyValue("--uix-theme") || cs.getPropertyValue("--card-mod-theme");
 
   // Determine debug flag from CSS variables.
   // Checked patterns:
