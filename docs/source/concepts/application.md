@@ -1,3 +1,6 @@
+---
+description: Learn about how UIX patches and applies to UI elements in Home Assistant.
+---
 # UIX application
 
 UIX has near 100% coverage of standard Home Assistant Frontend cards while still supporting custom cards not utilising the modern Home Assistant rendering container for cards.
