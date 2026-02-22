@@ -1,7 +1,7 @@
 # Themes
 
 !!! info "Theme variable"
-    The theme MUST define a variable `card-mod-theme` which MUST have the same value as the name of the theme. For example:
+    The theme MUST define a variable `uix-theme` which MUST have the same value as the name of the theme. For example:
     ```yaml
     my-awesome-theme:
         uix-theme: my-awesome-theme
@@ -11,22 +11,22 @@
 
 ## Theme variables
 
-- `card-mod-card`
-- `card-mod-row`
-- `card-mod-glance`
-- `card-mod-badge`
-- `card-mod-heading-badge`
-- `card-mod-assist-chip`
-- `card-mod-element`
+- `uix-card`
+- `uix-row`
+- `uix-glance`
+- `uix-badge`
+- `uix-heading-badge`
+- `uix-assist-chip`
+- `uix-element`
 
-- `card-mod-root`
-- `card-mod-view`
-- `card-mod-more-info`
-- `card-mod-sidebar`
-- `card-mod-config`
-- `card-mod-panel-custom`
-- `card-mod-top-app-bar-fixed`
-- `card-mod-dialog`
+- `uix-root`
+- `uix-view`
+- `uix-more-info`
+- `uix-sidebar`
+- `uix-config`
+- `uix-panel-custom`
+- `uix-top-app-bar-fixed`
+- `uix-dialog`
 
 Also `<any variable>-yaml`.
 
