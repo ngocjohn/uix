@@ -3,7 +3,7 @@ import { ModdedElement, apply_uix } from "../helpers/apply_uix";
 
 /*
 Patch ha-panel-profile for theme styling
-Config panels are routed via removing last Child and adding a new one.
+Profile panels are routed via removing last Child and adding a new one.
 Hence we need to prepend uix element to not interfere with the routing.
 
 There is no style passed to apply_uix here, everything comes only from themes.
