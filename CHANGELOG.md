@@ -1,3 +1,9 @@
+## [5.1.0-beta.2](https://github.com/Lint-Free-Technology/uix/compare/v5.1.0-beta.1...v5.1.0-beta.2) (2026-02-23)
+
+### 🐞 Bug Fixes
+
+* Use custom card's original config (hui-card) if uix and card_mod are empty in custom card's altered config. ([7ce8830](https://github.com/Lint-Free-Technology/uix/commit/7ce883093c566cf9eff7833435b8549db80ec3d5)), closes [#56](https://github.com/Lint-Free-Technology/uix/issues/56)
+
 ## [5.1.0-beta.1](https://github.com/Lint-Free-Technology/uix/compare/v5.0.0...v5.1.0-beta.1) (2026-02-23)
 
 ### ⭐ New Features
