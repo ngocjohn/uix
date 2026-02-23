@@ -5,8 +5,6 @@ import { ModdedElement, apply_uix } from "../helpers/apply_uix";
 Patch ha-config-* for theme styling
 
 There is no style passed to apply_uix here, everything comes only from themes.
-
-This will only work if uix loaded as a Frontend module.
 */
 
 @patch_element("ha-panel-developer-tools")

@@ -7,8 +7,6 @@ Profile panels are routed via removing last Child and adding a new one.
 Hence we need to prepend uix element to not interfere with the routing.
 
 There is no style passed to apply_uix here, everything comes only from themes.
-
-This will only work if uix loaded as a Frontend module.
 */
 
 @patch_element("ha-panel-profile")
