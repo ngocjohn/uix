@@ -1,3 +1,9 @@
+## [5.1.0-beta.1](https://github.com/Lint-Free-Technology/uix/compare/v5.0.0...v5.1.0-beta.1) (2026-02-23)
+
+### ⭐ New Features
+
+* Support for notifications via Home Assistant notification manager and ha-toast element. ([e8e2297](https://github.com/Lint-Free-Technology/uix/commit/e8e2297eca9be3aa077338b737f0797b3f4859f3)), closes [#51](https://github.com/Lint-Free-Technology/uix/issues/51)
+
 ## [5.0.0](https://github.com/Lint-Free-Technology/uix/compare/v4.2.1...v5.0.0) (2026-02-22)
 
 ### ⭐ New Features
