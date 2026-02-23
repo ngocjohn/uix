@@ -1,3 +1,9 @@
+## [5.1.0-beta.3](https://github.com/Lint-Free-Technology/uix/compare/v5.1.0-beta.2...v5.1.0-beta.3) (2026-02-23)
+
+### 🐞 Bug Fixes
+
+* Fix --uix-icon not working ha-icon-button (and any other element that does not use ha-icon in slot) ([34a71d2](https://github.com/Lint-Free-Technology/uix/commit/34a71d281c67ae16c1ff4e21445f3e684c00b9da)), closes [#54](https://github.com/Lint-Free-Technology/uix/issues/54)
+
 ## [5.1.0-beta.2](https://github.com/Lint-Free-Technology/uix/compare/v5.1.0-beta.1...v5.1.0-beta.2) (2026-02-23)
 
 ### 🐞 Bug Fixes
