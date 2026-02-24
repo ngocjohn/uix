@@ -1,19 +1,35 @@
+import { LitElement } from "lit";
 import { ModdedElement } from "../helpers/apply_uix";
 import { patch_element } from "../helpers/patch_function";
 import { Uix } from "../uix";
 
 /*
 Patch various icon elements to consider the following variables:
---card-mod-icon
---card-mod-icon-color
---card-mod-icon-dim
+--uix-icon
+--uix-icon-color
+--uix-icon-dim
 */
+
+let haIconAvailable = false;
 
 const updateIcon = (el) => {
   const styles = window.getComputedStyle(el);
 
   const icon = styles.getPropertyValue("--uix-icon") || styles.getPropertyValue("--card-mod-icon");
-  if (icon) el.icon = icon.trim();
+  if (icon && el.icon !== undefined) {
+    el.icon = icon.trim();
+  } else if (icon && el.tagName.toLowerCase() === "ha-svg-icon" && haIconAvailable) {
+    const iconEl: LitElement = el.querySelector("ha-icon") || document.createElement("ha-icon") as LitElement;
+    if (!el.contains(iconEl)) {
+      iconEl.style.display = "none";
+      el.appendChild(iconEl);
+    }
+    (iconEl as any).icon = icon;
+    iconEl.updateComplete.then(() => {
+      el.path = (iconEl as any)._path;
+      el.secondaryPath = (iconEl as any)._secondaryPath;
+    });
+  }
 
   const color = styles.getPropertyValue("--uix-icon-color") || styles.getPropertyValue("--card-mod-icon-color");
   if (color) el.style.color = color;
@@ -40,39 +56,39 @@ const bindUix = async (el) => {
   }
 
   // Find uix elements created later, increased interval
-  if (el.cm_retries < 5) {
-    el.cm_retries++;
-    return window.setTimeout(() => bindUix(el), 250 * el.cm_retries);
+  if (el.uix_retries < 5) {
+    el.uix_retries++;
+    return window.setTimeout(() => bindUix(el), 250 * el.uix_retries);
   }
 };
 
 @patch_element("ha-state-icon")
 class HaStateIconPatch extends ModdedElement {
-  cm_retries = 0;
+  uix_retries = 0;
   updated(_orig, ...args) {
     _orig?.(...args);
-    this.cm_retries = 0;
+    this.uix_retries = 0;
     bindUix(this);
   }
 }
 
 @patch_element("ha-icon")
 class HaIconPatch extends ModdedElement {
-  cm_retries = 0;
+  uix_retries = 0;
   updated(_orig, ...args) {
     _orig?.(...args);
-    this.cm_retries = 0;
+    this.uix_retries = 0;
     bindUix(this);
   }
 }
 
 @patch_element("ha-svg-icon")
 class HaSvgIconPatch extends ModdedElement {
-  cm_retries = 0;
+  uix_retries = 0;
   updated(_orig, ...args) {
     _orig?.(...args);
     if ((this.parentNode as any)?.host?.localName === "ha-icon") return;
-    this.cm_retries = 0;
+    this.uix_retries = 0;
     bindUix(this);
   }
 }
@@ -102,3 +118,9 @@ async function findParentUix(node: any, step = 0): Promise<Set<Uix>> {
     joinSet(uixElements, await findParentUix((node as any).host, step + 1));
   return uixElements;
 }
+
+window.addEventListener("uix-bootstrap", () => {
+  window.customElements.whenDefined("ha-icon").then(() => {
+    haIconAvailable = true;
+  });
+});

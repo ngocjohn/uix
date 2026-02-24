@@ -1,6 +1,7 @@
 // Any bootstrap listeners to be included prior to card-mod import
 import "./ll-custom-actions";
 import "./coordinator/coordinator";
+import "./patch/ha-icon";
 import "./uix";
 
 import "./patch/hui-card";
@@ -14,7 +15,6 @@ import "./patch/hui-entities-card";
 import "./patch/hui-glance-card";
 import "./patch/hui-picture-elements-card";
 
-import "./patch/ha-icon";
 import "./patch/hui-view";
 import "./patch/hui-root";
 import "./patch/ha-drawer";
